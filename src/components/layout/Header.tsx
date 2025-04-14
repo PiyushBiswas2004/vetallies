@@ -1,12 +1,13 @@
-"use client"
+"use client";
 
 import { useState } from "react"
 import Link from "next/link"
 import { Home, PawPrint, Bell, Search, DollarSign, LogIn, Menu, X } from "lucide-react"
-import Button from "@/app/components/ui/button"
+import {Button} from "@/components/ui/button"
 
-export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage mobile menu visibility
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -41,7 +42,7 @@ export function Header() {
         </nav>
 
         <div className="ml-auto flex items-center gap-4">
-          <Button variant="outline" size="small" className="gap-1 hidden md:flex">
+          <Button variant="outline" size="sm" className="gap-1 hidden md:flex">
             <LogIn className="h-4 w-4" />
             Login
           </Button>
@@ -76,7 +77,7 @@ export function Header() {
               <Bell className="h-4 w-4" />
               <span>Notifications</span>
             </Link>
-            <Button variant="outline" size="small" className="gap-2 justify-start">
+            <Button variant="outline" size="sm" className="gap-2 justify-start">
               <LogIn className="h-4 w-4" />
               Login
             </Button>
@@ -84,5 +85,7 @@ export function Header() {
         </div>
       )}
     </header>
-  )
-}
+  );
+};
+
+export default Header;

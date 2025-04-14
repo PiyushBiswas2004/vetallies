@@ -18,102 +18,26 @@ import {
   Users,
   Shield,
   Facebook,
-  Twitter,
   Instagram,
   Mail,
 } from "lucide-react"
-import { Home } from "@/components/ui/home-icon"
-
+import Header from "@/components/layout/header"
+import Footer from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { useState } from "react"
+
 
 export default function HomePage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   return (
     <div className="flex min-h-screen flex-col">
       {/* Sticky Navigation */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center">
-          <div className="mr-4 flex items-center">
-            <PawPrint className="h-6 w-6 text-teal-600" />
-            <span className="text-xl font-bold ml-2">VetAllies</span>
-          </div>
+      <Header />
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6 flex-1">
-            <div className="flex items-center gap-1 text-sm font-medium hover:text-teal-600 transition-colors">
-              <Home className="h-4 w-4" />
-              <span>Home</span>
-            </div>
-            <div className="flex items-center gap-1 text-sm font-medium hover:text-teal-600 transition-colors">
-              <PawPrint className="h-4 w-4" />
-              <span>Post Request</span>
-            </div>
-            <div className="flex items-center gap-1 text-sm font-medium hover:text-teal-600 transition-colors">
-              <Search className="h-4 w-4" />
-              <span>Browse Requests</span>
-            </div>
-            <div className="flex items-center gap-1 text-sm font-medium hover:text-teal-600 transition-colors">
-              <DollarSign className="h-4 w-4" />
-              <span>Donate</span>
-            </div>
-            <div className="flex items-center gap-1 text-sm font-medium hover:text-teal-600 transition-colors">
-              <Bell className="h-4 w-4" />
-              <span>Notifications</span>
-            </div>
-          </nav>
-
-          <div className="ml-auto flex items-center gap-4">
-            <Button variant="outline" size="sm" className="gap-1 hidden md:flex">
-              <LogIn className="h-4 w-4" />
-              Login
-            </Button>
-
-            {/* Mobile Menu Button */}
-            <button className="block md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden border-t p-4 bg-background">
-            <nav className="flex flex-col space-y-4">
-              <div className="flex items-center gap-2 text-sm font-medium hover:text-teal-600 transition-colors">
-                <Home className="h-4 w-4" />
-                <span>Home</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm font-medium hover:text-teal-600 transition-colors">
-                <PawPrint className="h-4 w-4" />
-                <span>Post Request</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm font-medium hover:text-teal-600 transition-colors">
-                <Search className="h-4 w-4" />
-                <span>Browse Requests</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm font-medium hover:text-teal-600 transition-colors">
-                <DollarSign className="h-4 w-4" />
-                <span>Donate</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm font-medium hover:text-teal-600 transition-colors">
-                <Bell className="h-4 w-4" />
-                <span>Notifications</span>
-              </div>
-              <Button variant="outline" size="sm" className="gap-2 justify-start">
-                <LogIn className="h-4 w-4" />
-                Login
-              </Button>
-            </nav>
-          </div>
-        )}
-      </header>
+      {/* Main Content */}
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -682,136 +606,7 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-teal-900 text-teal-100 py-12">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <PawPrint className="h-6 w-6" />
-                <span className="text-xl font-bold text-white">VetAllies</span>
-              </div>
-              <p className="text-sm opacity-80 mb-4">
-                Connecting animal lovers with strays in need since 2023. Our mission is to ensure every stray finds a
-                loving home.
-              </p>
-              <div className="flex gap-4">
-                <Link href="#" className="text-teal-100 hover:text-white">
-                  <Facebook className="h-5 w-5" />
-                  <span className="sr-only">Facebook</span>
-                </Link>
-                <Link href="#" className="text-teal-100 hover:text-white">
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
-                </Link>
-                <Link href="#" className="text-teal-100 hover:text-white">
-                  <Instagram className="h-5 w-5" />
-                  <span className="sr-only">Instagram</span>
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-white mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    Post a Request
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    Browse Requests
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    Success Stories
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    Donate
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-white mb-4">Resources</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    Animal Care Tips
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    Emergency Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    Partner Organizations
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="opacity-80 hover:opacity-100">
-                    Volunteer Handbook
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-white mb-4">Contact Us</h3>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-center gap-2 opacity-80">
-                  <Mail className="h-4 w-4" />
-                  <span>help@vetallies.org</span>
-                </li>
-                <li className="opacity-80">
-                  <p>123 Rescue Lane</p>
-                  <p>Animal City, AC 12345</p>
-                </li>
-              </ul>
-              <div className="mt-4">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-teal-100 text-teal-100 hover:bg-teal-800 hover:text-white"
-                >
-                  Contact Support
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-teal-800 mt-8 pt-8 text-sm opacity-80 flex flex-col md:flex-row justify-between">
-            <p>&copy; {new Date().getFullYear()} VetAllies. All rights reserved.</p>
-            <div className="flex gap-4 mt-4 md:mt-0">
-              <Link href="#" className="hover:underline">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:underline">
-                Terms of Service
-              </Link>
-              <Link href="#" className="hover:underline">
-                Cookie Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

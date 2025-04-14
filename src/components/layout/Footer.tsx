@@ -1,8 +1,10 @@
-import Link from "next/link"
-import { PawPrint, Facebook, Twitter, Instagram, Mail } from "lucide-react"
-import { Button } from "@/app/components/ui/button"
+"use client";
 
-export function Footer() {
+import Link from "next/link"
+import { PawPrint, Facebook, Twitter, Instagram, Mail, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+const Footer = () => {
   return (
     <footer className="bg-teal-900 text-teal-100 py-12">
       <div className="container">
@@ -11,7 +13,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <PawPrint className="h-6 w-6" />
-              <span className="text-xl font-bold text-white">Stray Haven</span>
+              <span className="text-xl font-bold text-white">VetAllies</span>
             </div>
             <p className="text-sm opacity-80 mb-4">
               Connecting animal lovers with strays in need since 2023. Our mission is to ensure every stray finds a loving home.
@@ -22,7 +24,7 @@ export function Footer() {
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link href="#" className="text-teal-100 hover:text-white">
-                <Twitter className="h-5 w-5" />
+                <X className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link href="#" className="text-teal-100 hover:text-white">
@@ -37,17 +39,17 @@ export function Footer() {
             <h3 className="font-bold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#" className="opacity-80 hover:opacity-100">
+                <Link href="/" className="opacity-80 hover:opacity-100">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="#" className="opacity-80 hover:opacity-100">
+                <Link href="/post-request" className="opacity-80 hover:opacity-100">
                   Post a Request
                 </Link>
               </li>
               <li>
-                <Link href="#" className="opacity-80 hover:opacity-100">
+                <Link href="/browse" className="opacity-80 hover:opacity-100">
                   Browse Requests
                 </Link>
               </li>
@@ -57,7 +59,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="opacity-80 hover:opacity-100">
+                <Link href="/donate" className="opacity-80 hover:opacity-100">
                   Donate
                 </Link>
               </li>
@@ -125,18 +127,20 @@ export function Footer() {
         <div className="border-t border-teal-800 mt-8 pt-8 text-sm opacity-80 flex flex-col md:flex-row justify-between">
           <p>&copy; {new Date().getFullYear()} Stray Haven. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:underline">
+            <Link href="/privacy" className="hover:underline">
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:underline">
+            <Link href="/t&c" className="hover:underline">
               Terms of Service
             </Link>
-            <Link href="#" className="hover:underline">
+            <Link href="/cookie" className="hover:underline">
               Cookie Policy
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;
