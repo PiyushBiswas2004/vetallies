@@ -42,10 +42,11 @@ const Header = () => {
         </nav>
 
         <div className="ml-auto flex items-center gap-4">
+          <Link href="/log-in">
           <Button variant="outline" size="sm" className="gap-1 hidden md:flex">
-            <LogIn className="h-4 w-4" />
-            Login
+            <LogIn className="h-4 w-4" />Login
           </Button>
+          </Link>
 
           <button className="block md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
