@@ -56,9 +56,11 @@ export default function HomePage() {
               donate to save a life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/post-request">
               <Button size="lg" className="bg-teal-600 hover:bg-teal-700">
                 Post a Help Request
-              </Button>
+              </Button>              
+              </Link>
               <Button size="lg" variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50">
                 View Urgent Cases
               </Button>
@@ -594,12 +596,16 @@ export default function HomePage() {
               action counts!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-teal-600 hover:bg-teal-50">
+              <Link href="/post-request">
+              <Button size="lg" variant="outline" className="border-white text-teal-600 hover:bg-teal-700">
                 Post a Help Request
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-teal-700">
+              </Link>
+              <Link href="/browse-requests">
+              <Button size="lg" variant="outline" className="border-white text-teal-600 hover:bg-teal-700">
                 Browse Requests
               </Button>
+              </Link>
             </div>
           </div>
         </section>

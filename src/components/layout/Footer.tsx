@@ -49,12 +49,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/browse" className="opacity-80 hover:opacity-100">
+                <Link href="/browse-requests" className="opacity-80 hover:opacity-100">
                   Browse Requests
                 </Link>
               </li>
               <li>
-                <Link href="#" className="opacity-80 hover:opacity-100">
+                <Link href="/success-stories" className="opacity-80 hover:opacity-100">
                   Success Stories
                 </Link>
               </li>
@@ -112,13 +112,11 @@ const Footer = () => {
               </li>
             </ul>
             <div className="mt-4">
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-teal-100 text-teal-100 hover:bg-teal-800 hover:text-white"
-              >
+              <Link href="/contact">
+              <Button size="sm" variant="outline" className="border-white text-teal-600 hover:bg-teal-700">
                 Contact Support
               </Button>
+              </Link>
             </div>
           </div>
         </div>

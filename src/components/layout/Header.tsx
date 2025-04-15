@@ -27,7 +27,7 @@ const Header = () => {
             <PawPrint className="h-4 w-4" />
             <span>Post Request</span>
           </Link>
-          <Link href="/browse" className="flex items-center gap-1 text-sm font-medium hover:text-teal-600 transition-colors">
+          <Link href="/browse-requests" className="flex items-center gap-1 text-sm font-medium hover:text-teal-600 transition-colors">
             <Search className="h-4 w-4" />
             <span>Browse Requests</span>
           </Link>
