@@ -104,7 +104,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2 opacity-80">
                 <Mail className="h-4 w-4" />
-                <span>help@strayhaven.org</span>
+                <span>help@vetallies.org</span>
               </li>
               <li className="opacity-80">
                 <p>123 Rescue Lane</p>
@@ -123,7 +123,7 @@ const Footer = () => {
 
         {/* Copyright and Legal Links */}
         <div className="border-t border-teal-800 mt-8 pt-8 text-sm opacity-80 flex flex-col md:flex-row justify-between">
-          <p>&copy; {new Date().getFullYear()} Stray Haven. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} VetAllies. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:underline">
               Privacy Policy

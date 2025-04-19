@@ -14,7 +14,7 @@ const Header = () => {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex items-center">
           <PawPrint className="h-6 w-6 text-teal-600" />
-          <span className="text-xl font-bold ml-2">Stray Haven</span>
+          <span className="text-xl font-bold ml-2">VetAllies</span>
         </div>
 
         {/* Desktop Navigation */}

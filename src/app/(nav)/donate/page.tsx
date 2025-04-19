@@ -1,8 +1,9 @@
 "use client"
-
 import { useState } from "react"
 import { Heart, Shield, CheckCircle, CreditCard, DollarSign } from "lucide-react"
 import Image from "next/image"
+import Header from "@/components/layout/header"
+import Footer from "@/components//layout/footer"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -14,11 +15,14 @@ import { Separator } from "@/components/ui/separator"
 import { Progress } from "@/components/ui/progress"
 
 export default function DonatePage() {
-  const [donationAmount, setDonationAmount] = useState<string>("25")
-  const [donationType, setDonationType] = useState<string>("one-time")
-  const [paymentMethod, setPaymentMethod] = useState<string>("card")
+
+  const [donationAmount,setDonationAmount] = useState<string>("25")
+    const [donationType, setDonationType] = useState<string>("one-time")
+    const [paymentMethod, setPaymentMethod] = useState<string>("card")
 
   return (
+    <div className="flex min-h-screen flex-col">
+      <Header />
     <div className="container py-10">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Your Donation Saves Lives</h1>
@@ -350,7 +354,7 @@ export default function DonatePage() {
           <Card>
             <CardContent className="pt-6">
               <p className="italic text-muted-foreground mb-4">
-                "After adopting my cat from Stray Haven, I decided to give back. The transparency about how funds are
+                "After adopting my cat from VetAllies, I decided to give back. The transparency about how funds are
                 used made me confident in my donation."
               </p>
               <div className="flex items-center gap-2">
@@ -384,6 +388,8 @@ export default function DonatePage() {
           </Card>
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
   )
 }

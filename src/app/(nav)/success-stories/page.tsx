@@ -3,6 +3,8 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Heart, Search, ArrowRight, CheckCircle } from "lucide-react"
+import Header from "@/components//layout/header"
+import Footer from "@/components/layout/footer"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -132,6 +134,8 @@ export default function SuccessStoriesPage() {
   const featuredStories = successStories.filter((story) => story.featured)
 
   return (
+    <div className="flex min-h-screen flex-col">
+    <Header />
     <div className="container py-10">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Success Stories</h1>
@@ -285,6 +289,8 @@ export default function SuccessStoriesPage() {
           </div>
         </div>
       )}
+    </div>
+    <Footer />
     </div>
   )
 }

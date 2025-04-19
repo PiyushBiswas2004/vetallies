@@ -6,6 +6,8 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { PawPrint, MapPin, Camera, Upload, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import Header from "@/components//layout/header"
+import Footer from "@/components/layout/footer"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -32,6 +34,8 @@ export default function PostRequestPage() {
   }
 
   return (
+    <div className="flex min-h-screen flex-col">
+    <Header />
     <div className="container py-10 max-w-3xl">
       <Link
         href="/"
@@ -248,6 +252,8 @@ export default function PostRequestPage() {
           </CardFooter>
         </Card>
       </form>
+    </div>
+    <Footer />
     </div>
   )
 }

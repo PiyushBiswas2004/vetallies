@@ -1,6 +1,8 @@
 import type React from "react"
 import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import Header from "@/components/layout/header"
+import Footer from "@/components/layout/footer"
 
 export const metadata = {
   title: "VetAllies - Help a Stray Today",
@@ -17,9 +19,11 @@ export default function RootLayout({
     <html lang="en" className="bg-background antialiased light" style={{colorScheme:"light"}}
     >
       <body>
+        <Header />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
+        <Footer />
       </body>
     </html>
   )

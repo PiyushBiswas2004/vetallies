@@ -33,12 +33,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col">
-      {/* Sticky Navigation */}
-      <Header />
-
-      {/* Main Content */}
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-b from-teal-50 to-white py-16 md:py-24">
@@ -52,7 +46,7 @@ export default function HomePage() {
               <span className="text-teal-600">Help a stray today.</span>
             </h1>
             <p className="mb-8 max-w-[700px] text-muted-foreground md:text-xl">
-              Stray Haven connects animal lovers with strays in need. Post help requests, find animals to adopt, or
+              VatAllies connects animal lovers with strays in need. Post help requests, find animals to adopt, or
               donate to save a life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -272,7 +266,9 @@ export default function HomePage() {
             </div>
 
             <div className="mt-10 text-center">
+              <Link href="/post-request">
               <Button className="bg-teal-600 hover:bg-teal-700">Post a Help Request</Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -413,7 +409,10 @@ export default function HomePage() {
                   </div>
                 </div>
 
+                
+                <Link href="/donate">
                 <Button className="bg-teal-600 hover:bg-teal-700">Donate Now</Button>
+                </Link>
               </div>
 
               <Card className="overflow-hidden">
@@ -423,22 +422,46 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-3 gap-2 mb-4">
-                    <Button variant="outline" className="border-teal-200 hover:bg-teal-50 hover:border-teal-300">
+                    <Button 
+                      type="button"
+                      variant="outline"
+                      className="border-teal-200 hover:bg-teal-50 hover:border-teal-300"
+                    >
                       $10
                     </Button>
-                    <Button variant="outline" className="border-teal-200 hover:bg-teal-50 hover:border-teal-300">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="border-teal-200 hover:bg-teal-50 hover:border-teal-300"
+                      >
                       $25
                     </Button>
-                    <Button variant="outline" className="border-teal-200 hover:bg-teal-50 hover:border-teal-300">
+                    <Button 
+                      type="button"
+                      variant="outline"
+                      className="border-teal-200 hover:bg-teal-50 hover:border-teal-300"
+                      >
                       $50
                     </Button>
-                    <Button variant="outline" className="border-teal-200 hover:bg-teal-50 hover:border-teal-300">
+                    <Button 
+                      type="button"
+                      variant="outline"
+                      className="border-teal-200 hover:bg-teal-50 hover:border-teal-300"
+                      >
                       $100
                     </Button>
-                    <Button variant="outline" className="border-teal-200 hover:bg-teal-50 hover:border-teal-300">
+                    <Button 
+                      type="button"
+                      variant="outline"
+                      className="border-teal-200 hover:bg-teal-50 hover:border-teal-300"
+                      >
                       $250
                     </Button>
-                    <Button variant="outline" className="border-teal-200 hover:bg-teal-50 hover:border-teal-300">
+                    <Button 
+                      type="button"
+                      variant="outline"
+                      className="border-teal-200 hover:bg-teal-50 hover:border-teal-300"
+                      >
                       Custom
                     </Button>
                   </div>
@@ -610,9 +633,5 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <Footer />
-    </div>
   )
 }
