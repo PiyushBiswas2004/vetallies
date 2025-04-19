@@ -4,8 +4,6 @@ import { useState } from "react"
 import { Search, Filter, MapPin, Clock, ArrowRight, PawPrint } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import Header from "@/components//layout/header"
-import Footer from "@/components/layout/footer"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -132,9 +130,6 @@ export default function BrowseRequestsPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col">
-    <Header />
-    {/* Main content */}
     <div className="container py-10">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>
@@ -362,8 +357,6 @@ export default function BrowseRequestsPage() {
           )}
         </div>
       </div>
-    </div>
-    <Footer />
     </div>
   )
 }
