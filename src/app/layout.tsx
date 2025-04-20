@@ -1,7 +1,7 @@
 import type React from "react"
 import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import Header from "@/components/layout/header"
+import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/footer"
 
 export const metadata = {
